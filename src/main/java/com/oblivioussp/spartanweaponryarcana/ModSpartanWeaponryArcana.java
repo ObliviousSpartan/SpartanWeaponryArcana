@@ -109,8 +109,8 @@ public class ModSpartanWeaponryArcana
 		/* Register the following here:
 		 * - Anything that requires other mods to be initialised first.
 		 */
-		
-		LexiconEntries.postInit();
+		if(ModHelper.isBotaniaLoaded())
+			LexiconEntries.postInit();
 
 		proxy.postInit(ev);
 		LogHelper.debug("Finished postInit phase!");

@@ -25,6 +25,7 @@ import com.oblivioussp.spartanweaponry.item.ItemGreatsword;
 import com.oblivioussp.spartanweaponryarcana.client.gui.CreativeTabsSWA;
 import com.oblivioussp.spartanweaponryarcana.network.PacketManaBurst;
 import com.oblivioussp.spartanweaponryarcana.util.ManaBurstHelper;
+import com.oblivioussp.spartanweaponryarcana.util.ModHelper;
 import com.oblivioussp.spartanweaponryarcana.util.Reference;
 import com.oblivioussp.spartanweaponryarcana.weaponproperty.WeaponPropertySWA;
 
@@ -36,6 +37,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Optional;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.internal.IManaBurst;
 import vazkii.botania.api.item.IPixieSpawner;
@@ -44,6 +46,9 @@ import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 
+@Optional.Interface(iface="vazkii.botania.api.mana.IManaUsingItem", modid=ModHelper.MOD_ID_BOTANIA)
+@Optional.Interface(iface="vazkii.botania.api.item.IPixieSpawner", modid=ModHelper.MOD_ID_BOTANIA)
+@Optional.Interface(iface="vazkii.botania.api.mana.ILensEffect", modid=ModHelper.MOD_ID_BOTANIA)
 public class ItemGreatswordSWA extends ItemGreatsword implements IManaUsingItem, IPixieSpawner, ILensEffect
 {
 	protected boolean usesMana = false;

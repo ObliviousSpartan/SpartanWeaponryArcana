@@ -22,17 +22,22 @@ import com.oblivioussp.spartanweaponry.api.weaponproperty.WeaponProperty;
 import com.oblivioussp.spartanweaponry.item.ItemSpear;
 import com.oblivioussp.spartanweaponryarcana.client.gui.CreativeTabsSWA;
 import com.oblivioussp.spartanweaponryarcana.util.ManaBurstHelper;
+import com.oblivioussp.spartanweaponryarcana.util.ModHelper;
 import com.oblivioussp.spartanweaponryarcana.util.Reference;
 import com.oblivioussp.spartanweaponryarcana.weaponproperty.WeaponPropertySWA;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraftforge.fml.common.Optional;
 import vazkii.botania.api.internal.IManaBurst;
 import vazkii.botania.api.item.IPixieSpawner;
 import vazkii.botania.api.mana.BurstProperties;
 import vazkii.botania.api.mana.ILensEffect;
 import vazkii.botania.api.mana.IManaUsingItem;
 
+@Optional.Interface(iface="vazkii.botania.api.mana.IManaUsingItem", modid=ModHelper.MOD_ID_BOTANIA)
+@Optional.Interface(iface="vazkii.botania.api.item.IPixieSpawner", modid=ModHelper.MOD_ID_BOTANIA)
+@Optional.Interface(iface="vazkii.botania.api.mana.ILensEffect", modid=ModHelper.MOD_ID_BOTANIA)
 public class ItemSpearSWA extends ItemSpear implements IManaUsingItem, IPixieSpawner, ILensEffect
 {
 	protected boolean usesMana = false;

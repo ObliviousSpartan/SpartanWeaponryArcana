@@ -21,13 +21,17 @@ import com.oblivioussp.spartanweaponry.api.ToolMaterialEx;
 import com.oblivioussp.spartanweaponry.api.weaponproperty.WeaponProperty;
 import com.oblivioussp.spartanweaponry.item.ItemJavelin;
 import com.oblivioussp.spartanweaponryarcana.client.gui.CreativeTabsSWA;
+import com.oblivioussp.spartanweaponryarcana.util.ModHelper;
 import com.oblivioussp.spartanweaponryarcana.util.Reference;
 import com.oblivioussp.spartanweaponryarcana.weaponproperty.WeaponPropertySWA;
 
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Optional;
 import vazkii.botania.api.item.IPixieSpawner;
 import vazkii.botania.api.mana.IManaUsingItem;
 
+@Optional.Interface(iface="vazkii.botania.api.mana.IManaUsingItem", modid=ModHelper.MOD_ID_BOTANIA)
+@Optional.Interface(iface="vazkii.botania.api.item.IPixieSpawner", modid=ModHelper.MOD_ID_BOTANIA)
 public class ItemJavelinSWA extends ItemJavelin implements IManaUsingItem, IPixieSpawner
 {
 	protected boolean usesMana = false;
