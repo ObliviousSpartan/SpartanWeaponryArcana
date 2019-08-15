@@ -22,9 +22,10 @@ public class Reference
 	// Mod information
 	public static final String ModID = "spartanweaponryarcana";
 	public static final String ModName = "Spartan Weaponry Arcana";
-	public static final String ModVersion = "beta 1.0.2";
+	public static final String ModVersion = "beta 1.0.3";
 	public static final String ModDependencies = "required-after:spartanweaponry@[beta-1.3.0,);after:botania;after:thaumcraft;after:embers";
 	public static final String McVersion = "[1.12.2]";
+	public static final String NetworkChannel = "swarcana";
 	
 	// Classes
 	public static final String ProxyClientClass = "com.oblivioussp.spartanweaponryarcana.proxy.ClientProxy";

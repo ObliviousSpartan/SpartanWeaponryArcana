@@ -37,8 +37,8 @@ public class ItemCrossbowSWA extends ItemCrossbow implements IManaUsingItem, IPi
 {
 	protected boolean usesMana = false;
 	float pixieChance = 0.0f;
-
-	public ItemCrossbowSWA(String unlocName, ToolMaterialEx material)
+	
+	public ItemCrossbowSWA(String unlocName, ToolMaterialEx material, IWeaponCallback weaponCallback)
 	{
 		super(unlocName, Reference.ModID, material);
 		this.setCreativeTab(CreativeTabsSWA.TAB_SWA);
@@ -53,11 +53,6 @@ public class ItemCrossbowSWA extends ItemCrossbow implements IManaUsingItem, IPi
 			if(prop != null)
 				pixieChance = prop.getMagnitude() / 100.0f;
 		}
-	}
-	
-	public ItemCrossbowSWA(String unlocName, ToolMaterialEx material, IWeaponCallback weaponCallback)
-	{
-		super(unlocName, Reference.ModID, material);
 		this.callback = weaponCallback;
 	}
 

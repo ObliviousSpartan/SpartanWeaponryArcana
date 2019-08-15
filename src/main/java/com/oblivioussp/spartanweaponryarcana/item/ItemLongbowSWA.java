@@ -37,8 +37,8 @@ public class ItemLongbowSWA extends ItemLongbow implements IManaUsingItem, IPixi
 {
 	protected boolean usesMana = false;
 	float pixieChance = 0.0f;
-
-	public ItemLongbowSWA(String unlocName, ToolMaterialEx material)
+	
+	public ItemLongbowSWA(String unlocName, ToolMaterialEx material, IWeaponCallback weaponCallback)
 	{
 		super(unlocName, Reference.ModID, material);
 		this.setCreativeTab(CreativeTabsSWA.TAB_SWA);
@@ -53,11 +53,6 @@ public class ItemLongbowSWA extends ItemLongbow implements IManaUsingItem, IPixi
 			if(prop != null)
 				pixieChance = prop.getMagnitude() / 100.0f;
 		}
-	}
-	
-	public ItemLongbowSWA(String unlocName, ToolMaterialEx material, IWeaponCallback weaponCallback)
-	{
-		super(unlocName, Reference.ModID, material);
 		this.callback = weaponCallback;
 	}
 

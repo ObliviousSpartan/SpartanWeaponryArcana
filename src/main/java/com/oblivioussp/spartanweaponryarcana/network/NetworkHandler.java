@@ -32,7 +32,7 @@ public class NetworkHandler
 
 	public static void init()
 	{
-		instance = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.ModID.toLowerCase());
+		instance = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.NetworkChannel.toLowerCase());
 
 		instance.registerMessage(PacketManaBurst.class, PacketManaBurst.class, getNextPacketId(), Side.SERVER);
 	}
